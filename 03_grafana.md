@@ -50,11 +50,8 @@ sudo systemctl start grafana-server
 ```
 
 Dashboards to import:
-
-```
 * [Node dashboard](https://grafana.com/dashboards/405)
 * [Apache dashboard](https://grafana.com/dashboards/3894)
-```
 
 ## Simulating HTTP usage
 
