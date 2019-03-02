@@ -48,6 +48,8 @@ Start the `grafana-server`
 ```
 sudo systemctl start grafana-server
 ```
+Grafana is now available on [http://localhost:3000/](http://localhost:3000/) with default login and password `admin`
+
 
 Dashboards to import:
 * [Node dashboard](https://grafana.com/dashboards/405)
