@@ -1,3 +1,12 @@
+## Getting prepared
+
+Install prerequisites for the workshop:
+
+```
+apt update
+apt install psmisc
+```
+
 ## Getting Prometheus
 Download the latest binary release of Prometheus for your platform from:
 
@@ -102,8 +111,7 @@ exporter:
 ```
   - job_name: 'node'
     static_configs:
-      - targets:
-          - 'localhost:9100'
+    - targets: ['localhost:9100']
 ```
 
 Send your Prometheus server a `SIGHUP` to initiate a reload of the configuration:
