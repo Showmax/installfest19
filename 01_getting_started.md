@@ -28,7 +28,7 @@ Start Prometheus. By default, Prometheus reads its config from a file
 called `prometheus.yml` in the current working directory, and it
 stores its database in a sub-directory called `data`, again relative
 to the current working directory. Both behaviors can be changed using
-the flags `-config.file` or `-storage.local.path`, respectively.
+the flags `-config.file` or `-storage.tsdb.path`, respectively.
 
 ```
 ./prometheus
@@ -55,14 +55,14 @@ while the *Graph* tab plots values over time. The latter can be quite expensive
 potentially expensive expressions in the *Console* tab first. Take a bit of
 time to play with the expression browser. Suggestions:
 
-* Evaluate `prometheus_local_storage_ingested_samples_total`, which shows you
+* Evaluate `prometheus_tsdb_head_samples_appended_total`, which shows you
   the total number of ingested samples over the lifetime of the server. In the
   *Graph* tab, it will show as steadily increasing.
-* The expression `prometheus_local_storage_ingested_samples_total[1m]`
+* The expression `prometheus_tsdb_head_samples_appended_total[1m]`
   evaluates to all sample values of the metric in the last minute. It cannot be
   plotted as a graph, but in the *Console* tab, you see a list of the values with
   (Unix) timestamp.
-* `rate(prometheus_local_storage_ingested_samples_total[1m])` calculates the
+* `rate(prometheus_tsdb_head_samples_appended_total[1m])` calculates the
   rate (increase per second) over the 1m timeframe. In other words, it tells you
   how many samples per second your server is ingesting. This expression can be
   plotted nicely, and it will become more interesting as you add more targets.
@@ -116,7 +116,7 @@ Then check the *Status* page of your Prometheus server to make sure the node
 exporter is scraped correctly. Shortly after, a whole lot of interesting
 metrics will show up in the expression browser, each of them starting with
 `node_`. (Reload the page to see them in the autocompletion.) As an example,
-have a look at `node_cpu`.
+have a look at `node_cpu_seconds_total`.
 
 The node exporter has a whole lot of modules to export machine
 metrics. Have a look at the
