@@ -46,6 +46,7 @@ sudo dpkg -i grafana_6.0.0_amd64.deb
 
 Start the `grafana-server`
 ```
+sudo systemctl daemon-reload
 sudo systemctl start grafana-server
 ```
 Grafana is now available on [http://localhost:3000/](http://localhost:3000/) with default login and password `admin`
