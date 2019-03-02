@@ -82,7 +82,7 @@ running it on other platforms.
 Linux example:
 
 ```
-wget https://github.com/prometheus/prometheus/releases/download/v2.7.1/prometheus-2.7.1.linux-amd64.tar.gz
+wget https://github.com/prometheus/node_exporter/releases/download/v0.17.0/node_exporter-0.17.0.linux-amd64.tar.gz
 tar zxf node_exporter-0.17.0.linux-amd64.tar.gz
 ```
 
