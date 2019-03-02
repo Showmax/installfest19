@@ -1,12 +1,3 @@
-## Getting prepared
-
-Install prerequisites for the workshop:
-
-```
-apt update
-apt install psmisc
-```
-
 ## Getting Prometheus
 Download the latest binary release of Prometheus for your platform from:
 

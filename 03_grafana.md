@@ -4,7 +4,7 @@ Install prerequisites:
 
 ```
 apt update
-apt install apache2 wrk ...
+apt install apache2 wrk
 
 ```
 
