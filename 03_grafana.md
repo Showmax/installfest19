@@ -12,7 +12,7 @@ apt install apache2 wrk
 
 Start the HTTP server:
 ```
-sudo systemctl start apache
+sudo systemctl start apache2
 ```
 
 Download and start apache exporter
